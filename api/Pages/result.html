@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-TAPIS &mdash; Hasil Deteksi Partikel</title>
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='app.css') }}">
+</head>
+
+<body>
+    {% include 'header.html' %}
+
+    <div class="container mt-5 mb-5">
+        <!-- Paragraf asli -->
+        <div class="card card-container mb-3">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-3">Paragraf Asli</h5>
+                <p class="text-justify">{{ paragraph }}</p>
+            </div>
+        </div>
+
+        <!-- Ringkasan -->
+        <div class="alert alert-info">
+            Ditemukan
+            <strong>
+                {{ results | selectattr('status', 'ne', 'correct') | list | length }}
+            </strong>
+            kandidat partikel yang tidak sesuai dari
+            <strong>{{ results|length }}</strong> kandidat yang dianalisis.
+        </div>
+
+        <!-- Tabel hasil -->
+        <div class="card card-container">
+            <div class="card-body">
+                <h5 class="card-title text-center mb-3">Detail Hasil Deteksi</h5>
+
+                {% if results %}
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Kandidat</th>
+                                <th>Token Sebelum</th>
+                                <th>Token Sesudah</th>
+                                <th>Status</th>
+                                <th>Saran Perbaikan</th>
+                                <th>Span</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for r in results %}
+                            <tr class="{% if r.status != 'correct' %}table-danger{% else %}table-success{% endif %}">
+                                <td>{{ loop.index }}</td>
+                                <td>{{ r.candidate }}</td>
+                                <td>{{ r.token_before }}</td>
+                                <td>{{ r.token_after }}</td>
+                                <td>
+                                    {% if r.status == 'correct' %}
+                                    Benar
+                                    {% else %}
+                                    Salah
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    {{ r.correction if r.correction is defined else '-' }}
+                                </td>
+                                <td>
+                                    {% if r.span is defined %}
+                                    {{ r.span }}
+                                    {% else %}
+                                    -
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% else %}
+                <p class="text-muted text-center mb-0">
+                    Tidak ada kandidat partikel yang dianalisis.
+                </p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

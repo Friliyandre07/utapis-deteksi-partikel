@@ -1,0 +1,34 @@
+Rule 0: Benar
+* Kalimat tidak mengandung kesalahan penulisan partikel -lah, -kah, -pun, atau preposisi per.
+
+Rule 1: Kesalahan pun pada Konjungsi
+* Partikel -pun pada 12 konjungsi khusus (walaupun, meskipun, dll.) ditulis terpisah, padahal seharusnya digabung. Contoh: walau pun → walaupun.
+
+Rule 2: Kesalahan pun pada Kata Umum
+* Partikel -pun ditulis serangkai dengan kata umum (selain konjungsi, akronim, atau istilah asing), padahal seharusnya dipisah. Contoh: diapun → dia pun.
+
+Rule 3: Kesalahan Preposisi per
+* Preposisi per (bermakna "demi", "tiap", atau "mulai") ditulis serangkai, padahal seharusnya dipisah. Contoh: perorang → per orang.
+
+Rule 4: Kesalahan Awalan per-
+* Awalan per- yang seharusnya ditulis serangkai dengan kata dasar (membentuk kata kerja atau bilangan), ditulis terpisah. Contoh: per baikan → perbaikan.
+
+Rule 5: Kesalahan lah/kah pada Kata Umum
+* Partikel -lah atau -kah ditulis terpisah dari kata dasar umum, padahal seharusnya ditulis serangkai. Contoh: benar kah → benarkah.
+
+Rule 6: Kesalahan pun pada Akronim
+* Partikel -pun pada akronim ditulis tanpa tanda hubung (-), baik digabung maupun dipisah spasi. Contoh: KPUpun atau KPU pun → KPU-pun.
+
+ Rule 7: Kesalahan lah/kah pada Akronim
+* Partikel -lah atau -kah pada akronim ditulis tanpa tanda hubung (-), baik digabung maupun dipisah spasi. Contoh: DPRlah atau DPR lah → DPR-lah.
+
+Rule 8: Kesalahan pun pada Istilah Asing
+* Partikel -pun pada istilah asing ditulis tanpa tanda hubung (-), baik digabung maupun dipisah spasi. Contoh: updatepun atau update pun → update-pun.
+
+Rule 9: Kesalahan lah/kah pada Istilah Asing
+* Partikel -lah atau -kah pada istilah asing ditulis tanpa tanda hubung (-), baik digabung maupun dipisah spasi. Contoh: downloadlah atau download lah → download-lah
+
+
+
+
+handle sekalipun -> satu kali saja (not yet)
