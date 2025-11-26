@@ -23,9 +23,6 @@ def detect_form():
     paragraph = request.form.get("paragraph", "") or ""
     results = detector.detect_particles(paragraph)
 
-    # Kirim ke template:
-    # - paragraph: teks asli
-    # - results: list dict hasil UTAPIS
     return render_template(
         "result.html",
         paragraph=paragraph,
