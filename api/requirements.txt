@@ -1,0 +1,9 @@
+flask
+pandas
+numpy
+joblib
+xgboost
+scikit-learn
+nltk
+regex
+nlp-id
