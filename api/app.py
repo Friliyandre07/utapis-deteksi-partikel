@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify, render_template
-from Models.utapis_detector import UtapisDetector
+from flask import Flask, request, jsonify, render_template # type: ignore
+from Models.utapis_detector import UtapisDetector # type: ignore
 
 app = Flask(__name__, template_folder="Pages", static_folder="static")
 detector = UtapisDetector()
