@@ -1,16 +1,13 @@
 {
-  "functions": {
-    "api/app.py": {
-      "runtime": "python3.12",
-      "includeFiles": [
-        "api/Data/**",
-        "api/Models/**"
-      ]
+  "builds": [
+    {
+      "src": "api/app.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "^/(.*)",
       "dest": "api/app.py"
     }
   ]
