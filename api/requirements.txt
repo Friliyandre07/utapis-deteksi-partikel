@@ -6,4 +6,3 @@ xgboost
 scikit-learn
 nltk
 regex
-nltk
