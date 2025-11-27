@@ -6,5 +6,4 @@ xgboost
 scikit-learn
 nltk
 regex
-nlp-id
-gunicorn
+nltk
